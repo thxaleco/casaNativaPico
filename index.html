@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casa Nativa | Refugio rural en Pereira</title>
+
+</head>
+<body>
+
+  <header id="inicio">
+    <nav class="container" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#inicio" id="logo"><strong>Casa Nativa</strong></a></li>
+      </ul>
+
+      <ul class="nav-desktop">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#reserva">Reserva</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#reserva" role="button" id="cta-nav">Reservar ahora</a></li>
+      </ul>
+
+      <ul class="nav-mobile">
+        <li>
+          <details class="dropdown" id="menu-movil">
+            <summary role="button" class="outline">Menú</summary>
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#experiencia">Experiencia</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#reserva">Reserva</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+              <li><a href="#reserva">Reservar ahora</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="experiencia" class="hero">
+      <div class="container grid">
+        <div>
+          <p>Escápate de la rutina</p>
+          <h1>Respira naturaleza. Descansa como en casa.</h1>
+          <p>Casa Nativa es un refugio rural pensado para desconectarte del ruido, disfrutar el paisaje y vivir una experiencia tranquila a pocos minutos de la ciudad.</p>
+          <p>
+            <a href="#reserva" role="button">Consultar disponibilidad</a>
+            <a href="#servicios" role="button" class="outline secondary">Conocer la experiencia</a>
+          </p>
+        </div>
+
+        <figure>
+          <img src="img/hero.jpg" alt="Paisaje rural con la casa de hospedaje Casa Nativa entre montañas">
+        </figure>
+      </div>
+    </section>
+
+    <section id="servicios" class="servicios">
+      <div class="container">
+        <hgroup>
+          <h2>Todo lo necesario para una estadía especial</h2>
+          <p>Diseñamos cada detalle para que disfrutes una experiencia cómoda, tranquila y cercana a la naturaleza.</p>
+        </hgroup>
+
+        <div class="grid servicios-grid">
+          <article class="servicio-card">
+            <h3>Habitación privada</h3>
+            <p>Espacios cómodos, iluminados y preparados para descansar.</p>
+          </article>
+
+          <article class="servicio-card">
+            <h3>Desayuno local</h3>
+            <p>Comienza el día con sabores frescos y productos de la región.</p>
+          </article>
+
+          <article class="servicio-card">
+            <h3>Zona de descanso</h3>
+            <p>Jardines y espacios tranquilos para leer, conversar o simplemente desconectarte.</p>
+          </article>
+
+          <article class="servicio-card">
+            <h3>Experiencias</h3>
+            <p>Recomendaciones de rutas, miradores y actividades cercanas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reserva" class="reserva">
+      <div class="container">
+        <hgroup>
+          <h2>Planea tu próxima escapada</h2>
+          <p>Cuéntanos cuándo quieres visitarnos y nos pondremos en contacto contigo para confirmar disponibilidad.</p>
+        </hgroup>
+
+        <article>
+          <form id="form-reserva" novalidate>
+            <fieldset>
+              <label for="nombre">Nombre completo
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+              </label>
+
+              <label for="correo">Correo electrónico
+                <input type="email" id="correo" name="correo" autocomplete="email" required>
+              </label>
+
+              <label for="telefono">Teléfono
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" required>
+              </label>
+
+              <div class="grid">
+                <label for="llegada">Fecha de llegada
+                  <input type="date" id="llegada" name="llegada" required>
+                </label>
+                <label for="salida">Fecha de salida
+                  <input type="date" id="salida" name="salida" required>
+                </label>
+              </div>
+
+              <label for="huespedes">Número de huéspedes
+                <input type="number" id="huespedes" name="huespedes" min="1" max="10" value="2" required>
+              </label>
+
+              <label for="mensaje">Mensaje o solicitud especial
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+              </label>
+            </fieldset>
+
+            <button type="submit">Enviar solicitud</button>
+            <p id="form-estado" role="status" aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contacto">
+    <div class="container">
+      <div class="grid">
+        <div>
+          <strong>Casa Nativa</strong>
+          <p>Un lugar para descansar, respirar y volver a lo esencial.</p>
+        </div>
+
+        <div>
+          <strong>Contacto</strong>
+          <p>
+            <a href="tel:+573005550180">+57 300 555 0180</a><br>
+            <a href="mailto:reservas@casanativa.demo">reservas@casanativa.demo</a>
+          </p>
+          <p><strong>Ubicación:</strong> Pereira, Risaralda</p>
+        </div>
+
+        <nav aria-label="Enlaces del pie de página">
+          <strong>Enlaces</strong>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#reserva">Reserva</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr>
+      <small>© 2026 Casa Nativa. Proyecto académico.</small>
+    </div>
+  </footer>
+
+</body>
+</html>
