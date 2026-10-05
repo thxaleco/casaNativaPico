@@ -36,43 +36,38 @@ header#inicio {
     font-size: 1.15rem; 
 }
 
-/* ==========================================================================
-   NAVEGACIÓN RESPONSIVE (MÉNU HAMBURGUESA)
-   ========================================================================== */
-
-/* Por defecto (Móviles): Ocultamos el menú de escritorio y mostramos el móvil */
 .nav-desktop {
   display: none !important;
 }
 
 .nav-mobile {
   display: flex !important;
+  
 }
 
-/* Forzamos a que el dropdown ocupe todo el ancho disponible si se despliega */
 #menu-movil {
   position: relative;
+  
 }
 
 #menu-movil ul {
   right: 0;
-  left: auto; /* Alinea el menú desplegable a la derecha */
+  left: auto; 
   min-width: 200px;
+  background-color: var(--pico-color-pumpkin-150);
 }
 
-/* Evitamos que el botón hamburguesa tenga la flecha clásica de los dropdowns */
+
 #menu-movil summary::after {
   display: none !important;
 }
 
-/* Ajustes estéticos para el botón hamburguesa */
 .hamburguesa {
   padding: 0.4rem 0.75rem !important;
   font-size: 1.2rem;
   line-height: 1;
 }
 
-/* Pantallas medianas y grandes (Tablets / Escritorio) */
 @media (min-width: 768px) {
   .nav-desktop {
     display: flex !important;
@@ -144,10 +139,17 @@ header#inicio {
     padding: calc(var(--pico-block-spacing-vertical) * 3) 0; 
 }
 .servicios hgroup { margin-bottom: 2.5rem; }
-.servicios h2::after { content: ""; display: block; width: 3rem; height: 3px;
-                       margin-top: .75rem; background: var(--pico-primary-background); }
-.servicio-card { margin: 0; border: var(--pico-border-width) solid var(--pico-muted-border-color);
-                 transition: box-shadow .2s ease; }
+.servicios h2::after { 
+    content: ""; 
+    display: block; 
+    width: 3rem; 
+    height: 3px;
+    margin-top: .75rem; 
+    background: var(--pico-primary-background); }
+.servicio-card { 
+    margin: 0; 
+    border: var(--pico-border-width) solid var(--pico-muted-border-color);
+    transition: box-shadow .2s ease; }
 .servicio-card:hover { box-shadow: 0 10px 24px color-mix(in srgb, var(--pico-color-pumpkin-950) 20%, transparent); }
 .servicio-card h3 { font-size: 1.1rem; margin-bottom: .4rem; }
 .servicio-card p { 
@@ -198,22 +200,23 @@ footer#contacto {
     background: var(--pico-color-lime-850); 
     color: var(--pico-color-sand-100);
     padding: calc(var(--pico-block-spacing-vertical) * 3) 0 var(--pico-block-spacing-vertical); 
+    font-size: .85;
 }
 footer#contacto strong { 
     color: var(--pico-color-pumpkin-200); 
     text-transform: uppercase;
-    letter-spacing: .1em; 
-    font-size: .75rem; 
+    font-size: .85rem; 
 }
 footer#contacto .grid > div:first-child strong {
     --pico-font-family: "Merriweather", Georgia, serif;
     color: var(--pico-color-sand-50); 
     text-transform: none; 
     letter-spacing: normal; 
-    font-size: 1.2rem; 
+    font-size: 1rem; 
 }
-footer#contacto a { 
-    color: var(--pico-color-sand-50); 
+footer#contacto a, p { 
+    color: var(--pico-color-sand-50);
+    font-size: .75rem; 
 }
 footer#contacto a:hover { 
     color: var(--pico-color-pumpkin-200); 
@@ -227,7 +230,7 @@ footer#contacto ul {
 
 footer#contacto nav { display: block; }
 footer#contacto nav ul { display: block; margin: 0; }
-footer#contacto nav li { display: block; padding: .15rem 0; }
+footer#contacto nav li { display: block; padding: .5rem 0; }
 footer#contacto small { color: var(--pico-color-sand-300); }
 
 @media (prefers-reduced-motion: reduce) {
