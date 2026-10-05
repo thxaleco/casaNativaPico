@@ -6,8 +6,8 @@ Proyecto académico de Aplicaciones móviles y web (Diseño Crossmedia, UCC).
 ## Tecnologías
 - Pico CSS v2 (tema `pumpkin` y paleta oficial de colores)
 - Anime.js v3.2.1
-- HTML5 y CSS3 (`css/styles.css` para estilos propios)
-- JavaScript (`js/animations.js`)
+- HTML5 y CSS3 (`styles.css` para estilos propios)
+- JavaScript (`script.js`)
 
 ## Framework asignado
 - **Nombre:** Pico CSS
