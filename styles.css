@@ -16,8 +16,12 @@
 h1, h2, h3, #logo { --pico-font-family: "Merriweather", Georgia, serif; }
 html { scroll-behavior: smooth; }
 section[id] { scroll-margin-top: 5rem; }
-button, [role="button"] { text-transform: uppercase; letter-spacing: .06em; font-size: .8rem; font-weight: 700; }
-
+button, [role="button"] { 
+    text-transform: uppercase; 
+    letter-spacing: .06em; 
+    font-size: .8rem; 
+    font-weight: 700; 
+}
 
 header#inicio {
   overflow-x: clip;
@@ -26,19 +30,46 @@ header#inicio {
   backdrop-filter: blur(6px);
   border-bottom: var(--pico-border-width) solid var(--pico-muted-border-color);
 }
-#logo, #logo strong { text-decoration: none; color: var(--pico-h1-color); font-size: 1.15rem; }
+#logo, #logo strong { 
+    text-decoration: none; 
+    color: var(--pico-h1-color); 
+    font-size: 1.15rem; 
+}
+
 .nav-desktop a:not([role="button"]) {
-  text-decoration: none; text-transform: uppercase; letter-spacing: .06em;
-  font-size: .75rem; font-weight: 700; color: var(--pico-h1-color);
+  text-decoration: none; 
+  text-transform: uppercase; 
+  letter-spacing: .06em;
+  font-size: .75rem; 
+  font-weight: 700; 
+  color: var(--pico-h1-color);
 }
 .nav-mobile { display: none; }
 
 @media (max-width: 1023px) { .nav-desktop { display: none; } .nav-mobile { display: flex; } }
 
-.hero { position: relative; min-height: 34rem; display: flex; align-items: center;
-        overflow: hidden; background: var(--pico-color-pumpkin-150); }
-.hero figure { position: absolute; inset: 0; margin: 0; }
-.hero figure img { width: 100%; height: 100%; object-fit: cover; color: transparent; }
+.hero { 
+    position: relative; 
+    min-height: 34rem; 
+    display: flex; 
+    align-items: center;
+    overflow: hidden; 
+    background: var(--pico-color-pumpkin-150); 
+}
+
+.hero figure { 
+    position: absolute; 
+    inset: 0; 
+    margin: 0; 
+}
+
+.hero figure img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    color: transparent; 
+}
+
 .hero::before {
   content: ""; position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(90deg,
@@ -47,27 +78,117 @@ header#inicio {
     transparent 100%);
 }
 .hero .container { width: 100%; }
-.hero .container > div:first-child { position: relative; z-index: 2; max-width: 34rem; }
-.hero h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.15; }
-.etiqueta { display: inline-block; padding: .25rem .9rem; border-radius: 999px; font-size: .8rem;
-            font-weight: 700; background: var(--pico-color-pumpkin-150); }
+.hero .container > div:first-child { 
+    position: relative; 
+    z-index: 2; 
+    max-width: 34rem; 
+}
+
+.hero h1 { 
+    font-size: clamp(2rem, 4.5vw, 3.2rem); 
+    line-height: 1.15; 
+}
+.etiqueta { 
+    display: inline-block; 
+    padding: .25rem .9rem; 
+    border-radius: 999px; 
+    font-size: .8rem;
+    font-weight: 700; 
+    background: var(--pico-color-pumpkin-150); 
+}
 @media (max-width: 767px) {
   .hero { min-height: 30rem; }
-  .hero::before { background: color-mix(in srgb, var(--pico-color-sand-50) 88%, transparent); }
+  .hero::before { 
+    background: color-mix(in srgb, var(--pico-color-sand-50) 88%, transparent); 
+}
 }
 
 
-.servicios { padding: calc(var(--pico-block-spacing-vertical) * 3) 0; }
+.servicios { 
+    padding: calc(var(--pico-block-spacing-vertical) * 3) 0; 
+}
 .servicios hgroup { margin-bottom: 2.5rem; }
 .servicios h2::after { content: ""; display: block; width: 3rem; height: 3px;
                        margin-top: .75rem; background: var(--pico-primary-background); }
 .servicio-card { margin: 0; border: var(--pico-border-width) solid var(--pico-muted-border-color);
                  transition: box-shadow .2s ease; }
-.servicio-card:hover { box-shadow: 0 10px 24px color-mix(in srgb, var(--pico-color-pumpkin-950) 14%, transparent); }
+.servicio-card:hover { box-shadow: 0 10px 24px color-mix(in srgb, var(--pico-color-pumpkin-950) 20%, transparent); }
 .servicio-card h3 { font-size: 1.1rem; margin-bottom: .4rem; }
 .servicio-card p { font-size: .92rem; margin-bottom: 0; color: var(--pico-muted-color); }
 .icono { display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem;
          margin-bottom: .75rem; border-radius: 50%; font-size: 1.4rem; background: var(--pico-color-pumpkin-150); }
 @media (min-width: 768px) and (max-width: 1023px) { .servicios-grid { grid-template-columns: repeat(2, 1fr); } }
-.js .servicio-card { opacity: 0; 
+.js .servicio-card { opacity: 0; }
+
+
+.reserva { 
+    background: var(--pico-color-sand-100); 
+    padding: calc(var(--pico-block-spacing-vertical) * 3.5) 0; 
+}
+.reserva hgroup { 
+    text-align: center; 
+}
+.reserva article { 
+    max-width: 46rem; 
+    margin-inline: auto; 
+}
+.reserva label { 
+    font-weight: 700; 
+    font-size: .9rem; 
+}
+.reserva button[type="submit"] {
+    width: 100%; 
+}
+#form-estado { 
+    font-weight: 700; 
+    color: var(--pico-primary); 
+}
+#form-estado:empty { 
+    display: none; 
+}
+#form-estado.error { 
+    color: var(--pico-color-red-600); 
+}
+
+
+footer#contacto { 
+    --pico-color: var(--pico-color-sand-100);
+    background: var(--pico-color-lime-850); 
+    color: var(--pico-color-sand-100);
+    padding: calc(var(--pico-block-spacing-vertical) * 3) 0 var(--pico-block-spacing-vertical); 
+}
+footer#contacto strong { 
+    color: var(--pico-color-pumpkin-200); 
+    text-transform: uppercase;
+    letter-spacing: .1em; 
+    font-size: .75rem; 
+}
+footer#contacto .grid > div:first-child strong {
+    --pico-font-family: "Merriweather", Georgia, serif;
+    color: var(--pico-color-sand-50); 
+    text-transform: none; 
+    letter-spacing: normal; 
+    font-size: 1.2rem; 
+}
+footer#contacto a { 
+    color: var(--pico-color-sand-50); 
+}
+footer#contacto a:hover { 
+    color: var(--pico-color-pumpkin-200); 
+}
+footer#contacto hr { 
+    border-color: color-mix(in srgb, var(--pico-color-sand-50) 15%, transparent); 
+}
+footer#contacto ul { 
+    list-style: none; padding: 0; 
+}
+
+footer#contacto nav { display: block; }
+footer#contacto nav ul { display: block; margin: 0; }
+footer#contacto nav li { display: block; padding: .15rem 0; }
+footer#contacto small { color: var(--pico-color-sand-300); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .servicio-card { opacity: 1; }
 }
