@@ -36,17 +36,53 @@ header#inicio {
     font-size: 1.15rem; 
 }
 
-.nav-desktop a:not([role="button"]) {
-  text-decoration: none; 
-  text-transform: uppercase; 
-  letter-spacing: .06em;
-  font-size: .75rem; 
-  font-weight: 700; 
-  color: var(--pico-h1-color);
-}
-.nav-mobile { display: none; }
+/* ==========================================================================
+   NAVEGACIÓN RESPONSIVE (MÉNU HAMBURGUESA)
+   ========================================================================== */
 
-@media (max-width: 1023px) { .nav-desktop { display: none; } .nav-mobile { display: flex; } }
+/* Por defecto (Móviles): Ocultamos el menú de escritorio y mostramos el móvil */
+.nav-desktop {
+  display: none !important;
+}
+
+.nav-mobile {
+  display: flex !important;
+}
+
+/* Forzamos a que el dropdown ocupe todo el ancho disponible si se despliega */
+#menu-movil {
+  position: relative;
+}
+
+#menu-movil ul {
+  right: 0;
+  left: auto; /* Alinea el menú desplegable a la derecha */
+  min-width: 200px;
+}
+
+/* Evitamos que el botón hamburguesa tenga la flecha clásica de los dropdowns */
+#menu-movil summary::after {
+  display: none !important;
+}
+
+/* Ajustes estéticos para el botón hamburguesa */
+.hamburguesa {
+  padding: 0.4rem 0.75rem !important;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Pantallas medianas y grandes (Tablets / Escritorio) */
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex !important;
+  }
+  
+  .nav-mobile {
+    display: none !important;
+  }
+}
+
 
 .hero { 
     position: relative; 
@@ -114,11 +150,17 @@ header#inicio {
                  transition: box-shadow .2s ease; }
 .servicio-card:hover { box-shadow: 0 10px 24px color-mix(in srgb, var(--pico-color-pumpkin-950) 20%, transparent); }
 .servicio-card h3 { font-size: 1.1rem; margin-bottom: .4rem; }
-.servicio-card p { font-size: .92rem; margin-bottom: 0; color: var(--pico-muted-color); }
-.icono { display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem;
-         margin-bottom: .75rem; border-radius: 50%; font-size: 1.4rem; background: var(--pico-color-pumpkin-150); }
-@media (min-width: 768px) and (max-width: 1023px) { .servicios-grid { grid-template-columns: repeat(2, 1fr); } }
-.js .servicio-card { opacity: 0; }
+.servicio-card p { 
+    font-size: .92rem; margin-bottom:
+     0; color: var(--pico-muted-color); }
+.icono { display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 3rem; height: 3rem;
+         margin-bottom: .75rem; 
+         border-radius: 50%; font-size: 1.4rem; 
+         background: var(--pico-color-pumpkin-150); 
+        }
 
 
 .reserva { 

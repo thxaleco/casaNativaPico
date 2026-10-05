@@ -13,31 +13,61 @@
  
   <script>document.documentElement.classList.add('js');</script>
  
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
   <header id="inicio">
-    <nav class="container">
-      <ul>
-        <li><a href="#inicio" id="logo"><strong>Casa Nativa</strong></a></li>
-      </ul>
+  <nav class="container" aria-label="Navegación principal">
 
-      <ul class="nav-desktop">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#reserva">Reserva</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#reserva" role="button" id="cta-nav">Reservar ahora</a></li>
-      </ul>
+    <!-- LOGO -->
+    <ul>
+      <li>
+        <a href="#inicio" id="logo">
+          <strong>Casa Nativa</strong>
+        </a>
+      </li>
+    </ul>
 
-          </details>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <!-- MENÚ ESCRITORIO -->
+    <ul class="nav-desktop">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#reserva">Reserva</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li>
+        <a href="#reserva" role="button" id="cta-nav">
+          Reservar ahora
+        </a>
+      </li>
+    </ul>
+
+    <!-- MENÚ TABLET / MÓVIL -->
+    <ul class="nav-mobile">
+      <li>
+        <details class="dropdown" id="menu-movil">
+
+          <summary role="button" class="outline hamburguesa">
+            ☰
+          </summary>
+
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#reserva">Reserva</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#reserva">Reservar ahora</a></li>
+          </ul>
+
+        </details>
+      </li>
+    </ul>
+
+  </nav>
+</header>
 
   <main>
 
@@ -59,36 +89,37 @@
       </div>
     </section>
 
-    <section id="servicios" class="servicios">
+     <section id="servicios" class="servicios">
       <div class="container">
         <hgroup>
           <h2>Todo lo necesario para una estadía especial</h2>
           <p>Diseñamos cada detalle para que disfrutes una experiencia cómoda, tranquila y cercana a la naturaleza.</p>
         </hgroup>
-
         <div class="grid servicios-grid">
           <article class="servicio-card">
+            <span class="icono" aria-hidden="true">🛏️</span>
             <h3>Habitación privada</h3>
             <p>Espacios cómodos, iluminados y preparados para descansar.</p>
           </article>
-
           <article class="servicio-card">
+            <span class="icono" aria-hidden="true">🥐</span>
             <h3>Desayuno local</h3>
             <p>Comienza el día con sabores frescos y productos de la región.</p>
           </article>
-
           <article class="servicio-card">
+            <span class="icono" aria-hidden="true">🌳</span>
             <h3>Zona de descanso</h3>
             <p>Jardines y espacios tranquilos para leer, conversar o simplemente desconectarte.</p>
           </article>
-
           <article class="servicio-card">
+            <span class="icono" aria-hidden="true">🥾</span>
             <h3>Experiencias</h3>
             <p>Recomendaciones de rutas, miradores y actividades cercanas.</p>
           </article>
         </div>
       </div>
     </section>
+ 
 
     <section id="reserva" class="reserva">
       <div class="container">
